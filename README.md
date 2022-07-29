@@ -1,6 +1,8 @@
 #  Detective Model Selector
 A simple addon to allow players to choose the model they will spawn with when they are chosen as detectives in TTT.
 
+![](https://i.imgur.com/hf6RjUp.png)
+
 ## Usage
 
 By default, the menu can be opened with the F5 key and through a tab in the TTT settings. Players can see all available models and choose whichever one they want (if they're allowed to), or reset to the default model.
