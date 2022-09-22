@@ -158,7 +158,7 @@ function DTSkin:Panel(parent, ttt)
         if (DTSkin.Config.DefaultModel == "") then defaultModel = (GAMEMODE.playermodel or "models/player/phoenix.mdl") else defaultModel = DTSkin.Config.DefaultModel end
 
         if (this:IsHovered()) then
-            if (modelPreview:GetModel() == defaultModel)  then return end
+            if (modelPreview:GetModel() == defaultModel) then return end
 
             modelPreview:SetModel(defaultModel)
         end
