@@ -146,11 +146,21 @@ function DTSkin:Panel(parent, ttt)
     setToDefault:SetPos(355, 330)
     setToDefault:SetSize(225, 30)
 
+    local defaultModel
+
     setToDefault.Think = function(this)
         if (not DTSkin.Skin) then
             this:SetEnabled(false)
         else
             this:SetEnabled(true)
+        end
+
+        if (DTSkin.Config.DefaultModel == "") then defaultModel = (GAMEMODE.playermodel or "models/player/phoenix.mdl") else defaultModel = DTSkin.Config.DefaultModel end
+
+        if (this:IsHovered()) then
+            if (modelPreview:GetModel() == defaultModel)  then return end
+
+            modelPreview:SetModel(defaultModel)
         end
     end
 
