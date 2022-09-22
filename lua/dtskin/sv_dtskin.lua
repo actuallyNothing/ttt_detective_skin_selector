@@ -87,7 +87,7 @@ net.Receive("DTSkin_Ready", function(len, ply)
 
     if (not modelID) then
 
-        modelID = DTSkin.Config.DefaultSkin
+        modelID = DTSkin.Config.DefaultModel
         cookie.Delete(cookieID)
 
     end
