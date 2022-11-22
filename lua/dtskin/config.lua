@@ -39,7 +39,7 @@ C.AllowedGroups = {
     -- ["donator"] = true
 }
 
--- The key that will open the menu. Set to KEY_NONE to disable
+-- The key that will open the menu. Set to nil to disable
 C.Key = KEY_F5
 
 -- Show the panel as a tab in the TTT settings (F1)?

@@ -168,7 +168,7 @@ function DTSkin:Panel(parent, ttt)
         ChooseModel("")
     end
 
-    if (not DTSkin.Config.AllowedGroups[LocalPlayer():GetUserGroup()]) then
+    if (not table.IsEmpty(DTSkin.Config.AllowedGroups) and not DTSkin.Config.AllowedGroups[LocalPlayer():GetUserGroup()]) then
 
         local disabledPanel = vgui.Create("DPanel", pnl)
         disabledPanel:Dock(FILL)
@@ -227,6 +227,8 @@ hook.Add("InitPostEntity", "DTSkin_Ready", function()
 end)
 
 hook.Add("Think", "WeaponSelectionKey", function()
+
+    if (not DTSkin.Config.Key) then return end
 
     if input.IsKeyDown(DTSkin.Config.Key) then
 
